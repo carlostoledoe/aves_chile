@@ -3,16 +3,17 @@ import json
 
 
 def request_get(url):
-    '''Esta función recibe como parámetro la url de una api y lo transforma 
-    en un objeto JSON'''
+    '''Esta función recibe como parámetro la url de una api y entrega un
+    objeto JSON con los datos'''
     return json.loads(requests.get(url).text) 
 
 
 def html_card(photos):
-    '''Esta función crea cards con los datos de la api. Recibe el parámetro photos, que es el objeto JSON 
-    provienete de la función request_get(url) ejecutada en main. Luego se crea una string vacio
-    para llenarlo con las card, a las cuales se les interpla las imágenes y nombres obtenidos al 
-    iterar el diccionario photos. Por cada iteración crea una card y se suma a la variable card'''
+    '''Esta función crea cards con los datos obtenidos del objeto JSON. Recibe el parámetro photos, que es 
+    el objeto JSON creado de la función request_get(url) ejecutada en main. Luego, se crea un string 
+    vacio para ser llenado con las card, a las cuales se les interpolado las imágenes y nombres obtenidos al 
+    iterar el diccionario photos (el objeto JSON). Por cada iteración, interpola datos a la plantilla card y se
+    suma a la variable card'''
     card = ''
     for photo in photos:
         card += f'''<div class="col-3">
@@ -34,9 +35,9 @@ def html_card(photos):
 
 
 def crear_html(card):
-    '''Esta fución crea un archivo index.html con las card. Se recibe el parámetro card, el cual contiene
+    '''Esta fución crea un archivo index.html con las cards. Se recibe el parámetro card, el cual contiene
     todas las card anteriomente creadas por la función html_card(photos). Interpola la varible card una plantilla
-    html y luego crea un archivo index.html'''
+    html y luego crea un archivo index.html con el template ya modificado'''
     template = f'''<!doctype html>
     <html lang="en">
         <head>
