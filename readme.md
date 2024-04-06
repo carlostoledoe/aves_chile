@@ -1,6 +1,6 @@
 ## La aplicación crea un index.html por medio del uso de una API con Python
 
-Al ejectar main.py desde el terminal, se ejecuta la siguiente función:
+Al ejecutar main.py desde el terminal, se ejecuta la siguiente función anidada:
 
 >       crear_html(html_card(request_get(url)))
 
