@@ -2,7 +2,7 @@
 
 Al ejecutar main.py desde el terminal, se ejecuta la siguiente función anidada:
 
->       crear_html(html_card(request_get(url)))
+>       crear_index(crear_html(html_card(request_get(url))))
 
 
 * **request_get(url)** : Crea un objeto JSON llamado photos, el cual contiene todas las aves de la API
