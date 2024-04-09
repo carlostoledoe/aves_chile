@@ -9,6 +9,8 @@ Al ejecutar main.py desde el terminal, se ejecuta la siguiente función anidada:
 
 * **html_card()** : Recibe el objeto photos y crea diferentes cards (formato Bootstrap), adjuntándolas en una variable llamda card
 
-* **crear_html()** : Recibe las cards creadas y las interpola en una plantilla html y crea un archivo index.html listo para ser abierto en el navegador.
+* **crear_html()** : Recibe las cards creadas y las interpola en una plantilla html
+
+* **crear_index()** : Recibe la plantilla html y crea un archivo index.html listo para ser abierto en el navegador.
 
 
